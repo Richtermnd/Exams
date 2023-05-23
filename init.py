@@ -15,8 +15,11 @@ for i in range(27):
         except FileExistsError:
             pass
         
-        if len(os.listdir(f'{cur_dir}/{level}')) > 0:
-            os.remove(f'{cur_dir}/{level}/temp.txt')
+        if len(os.listdir(f'{cur_dir}/{level}')) > 1:
+            try:
+                os.remove(f'{cur_dir}/{level}/temp.txt')
+            except FileExistsError:
+                pass
         else: 
             with open(f'{cur_dir}/{level}/temp.txt', mode='w') as f:
                 f.write('File to add dir to git')
