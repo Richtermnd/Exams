@@ -18,7 +18,7 @@ for i in range(27):
         if len(os.listdir(f'{cur_dir}/{level}')) > 1:
             try:
                 os.remove(f'{cur_dir}/{level}/temp.txt')
-            except FileExistsError:
+            except FileNotFoundError:
                 pass
         else: 
             with open(f'{cur_dir}/{level}/temp.txt', mode='w') as f:
