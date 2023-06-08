@@ -1,7 +1,7 @@
 import os
 
 
-os.chdir('tasks/task27/homework/n31/')
+os.chdir('tasks/task27/homework/n38/')
 
 
 def solution(var):
