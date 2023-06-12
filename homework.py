@@ -12,7 +12,7 @@ else:
 
 for i in range(int(n)):
     path = f'tasks/task{task_n}/homework/'
-    if is_dir:
+    if int(is_dir):
         if not os.path.exists(f'{path}/n{i + 1}/'):
             os.mkdir(f'{path}/n{i + 1}/')
         path = f'{path}/n{i + 1}/'
