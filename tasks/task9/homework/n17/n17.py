@@ -1,7 +1,8 @@
 import os
 import csv
 
-os.chdir('d:/python/ЕГЭ/tasks/task9/homework/n10/')
+
+os.chdir('d:/python/ЕГЭ/tasks/task9/homework/n17/')
 
 
 def main():
@@ -11,12 +12,10 @@ def main():
         for row in reader:
             row = [int(x) for x in row]
 
-            row.sort()
-            cond1 = row[3] < sum(row[:3])
-
-            cond2 = len(set(row)) == 3
+            # row.sort()
+            cond1 = row[0] == row[2] and row[1] == row[3] and row[0] != row[1]
             
-            if cond1 and cond2:
+            if cond1:
                 cnt += 1
 
         print(cnt)
