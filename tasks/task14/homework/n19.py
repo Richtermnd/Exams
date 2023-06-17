@@ -1,0 +1,16 @@
+def to_dec(x: int, n: int) -> list[int]:
+    a = []
+    while x:
+        a = [x % n] + a
+        x //= n
+    return a
+
+
+def main():
+    for i in range(36, 49):
+        if to_dec(i, 13)[-1] == 3:
+            print(i)
+            break
+
+
+main()
