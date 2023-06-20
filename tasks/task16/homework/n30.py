@@ -3,7 +3,7 @@ def f(n):
 
 
 def main():
-    pass
+    print(2253 + 2251)
 
 
 main()

@@ -3,7 +3,10 @@ def f(n):
 
 
 def main():
-    pass
+    """
+    f(3) расписываешь до f(7)
+    """
+    print(98)
 
 
 main()

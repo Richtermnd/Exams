@@ -3,7 +3,7 @@ def f(n):
 
 
 def main():
-    pass
+    print(10_000 ** 2 + 9_999 * 2 + 9_997 * 2)
 
 
 main()

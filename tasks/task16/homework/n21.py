@@ -3,7 +3,7 @@ def f(n):
 
 
 def main():
-    pass
+    print(2023 * 2022 * 2021)
 
 
 main()
