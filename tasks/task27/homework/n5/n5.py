@@ -1,18 +1,19 @@
 import os
+from math import comb
 
 
-os.chdir('tasks/task27/homework/n_/')
+os.chdir('tasks/task27/homework/n5/')
 
 
 def solution(var):
     f = open(f'27{var}.txt', mode='r')
     n = int(f.readline())
-    a = []
+    res = 0
     for _ in range(n):
         x = int(f.readline())
-        a.append(x)
-    res = ...
-    print(res)
+        if x % 19 == 0:
+            res += 1
+    print(comb(res, 3))
 
 
 solution('A')

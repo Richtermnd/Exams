@@ -1,17 +1,22 @@
 import os
+from math import comb
 
-
-os.chdir('tasks/task27/homework/n_/')
+os.chdir('tasks/task27/homework/n2/')
 
 
 def solution(var):
     f = open(f'27{var}.txt', mode='r')
     n = int(f.readline())
-    a = []
+    a = 0
+    a7 = 0
     for _ in range(n):
         x = int(f.readline())
-        a.append(x)
-    res = ...
+        if x % 7:
+            a += 1
+        else:
+            a7 += 1
+    
+    res = comb(a7, 2) + a7 * a
     print(res)
 
 

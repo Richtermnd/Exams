@@ -1,17 +1,19 @@
 import os
+from math import comb
 
 
-os.chdir('tasks/task27/homework/n_/')
+os.chdir('tasks/task27/homework/n7/')
 
 
 def solution(var):
     f = open(f'27{var}.txt', mode='r')
     n = int(f.readline())
-    a = []
+    a = [0] * 69
     for _ in range(n):
         x = int(f.readline())
-        a.append(x)
-    res = ...
+        a[x % 69] += 1
+    
+    res = sum(comb(x, 2) for x in a)
     print(res)
 
 
