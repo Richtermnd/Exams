@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,12 +7,10 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    pass
+    for x in range(8, 100):
+        if int('103', x) == int('97', x + 2):
+            print(x)
+            break
 
 
 main()
-
-"""
-n ^ 2 + 3 = 9(n + 2) + 7
-n ^ 2 - 9n - 22 = 0
-"""

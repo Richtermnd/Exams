@@ -1,4 +1,4 @@
-def to_n(x: int, n: int) -> list[int]:
+def to_dec(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -11,3 +11,8 @@ def main():
 
 
 main()
+
+"""
+n ^ 2 + 3 = 9(n + 2) + 7
+n ^ 2 - 9n - 22 = 0
+"""

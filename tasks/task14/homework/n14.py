@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,14 +7,10 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    pass
+    for x in range(4, 100):
+        if int('21', x) * int('13', x) == int('313', x):
+            print(x)
+            break
 
 
 main()
-
-"""
-(2x + 1) * (x + 3) = 3x^2 + x + 3
-2x^2 + 6x + x + 3 = 3x^2 + x + 3
-x^2 - 6x = 0
-x = 6
-"""

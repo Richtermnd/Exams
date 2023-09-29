@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,9 +7,9 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    for x in range(21, 30):
-        if to_dec(x, 3)[-2:] == [1, 1]:
-            print(x)
+    for x in range(21, 29):
+        if to_n(x, 3)[-2:] == [1, 1]:
+            print(x) 
 
 
 main()

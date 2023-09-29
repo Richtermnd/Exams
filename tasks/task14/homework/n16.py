@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,10 +7,9 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    i = 40
-    while bin(i)[-4:] != '1011':
-        i -= 1
-    print(i)
+    for x in range(40):
+        if to_n(x, 2)[-4:] == [1, 0, 1, 1]:
+            print(x)
 
 
 main()

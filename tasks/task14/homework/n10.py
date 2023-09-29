@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,9 +7,9 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    a = 5 * 216 ** 1156 - 4 * 36 ** 1147 + 6 ** 1153 - 875
-    res = to_dec(a, 6)
-    print(res.count(5) - res.count(0))
+    x = 5 * 216 ** 1156 - 4 * 36 ** 1147 + 6 ** 1153 - 875
+    h = to_n(x, 6)
+    print(h.count(5) - h.count(0))
 
 
 main()

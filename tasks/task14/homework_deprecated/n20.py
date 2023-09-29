@@ -1,4 +1,4 @@
-def to_n(x: int, n: int) -> list[int]:
+def to_dec(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,11 +7,9 @@ def to_n(x: int, n: int) -> list[int]:
 
 
 def main():
-    # 1. [0; 5 ** 4 - 1]
-    # 2. [16: +inf]
     cnt = 0
-    for x in range(16, 5 ** 4):
-        if hex(x)[-1] == 'c':
+    for i in range(17, 625):
+        if to_dec(i, 16)[-1] == 12:
             cnt += 1
     print(cnt)
 

@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,11 +7,20 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    cnt = 0
-    for i in range(17, 625):
-        if to_dec(i, 16)[-1] == 12:
-            cnt += 1
-    print(cnt)
-
+    for x in range(15):
+        a = 1 * 15 ** 4 + \
+            2 * 15 ** 3 + \
+            3 * 15 ** 2 + \
+            x * 15 ** 1 + \
+            5 * 15 ** 0
+        
+        b = 1 * 15 ** 4 + \
+            x * 15 ** 3 + \
+            2 * 15 ** 2 + \
+            3 * 15 ** 1 + \
+            3 * 15 ** 0
+        
+        if (a + b) % 14 == 0:
+            print((a + b) // 14)
 
 main()

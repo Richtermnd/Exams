@@ -7,11 +7,11 @@ def to_n(x: int, n: int) -> list[int]:
 
 
 def main():
-    # 1. [6; 35]
-    # 2. [25, 125]
-    for n in range(25, 36):
-        if to_n(n, 11)[-1] == 1:
-            print(n)
+    for a in range(1000):
+        x = 36 ** 17 - 6 ** a + 71
+        if sum(to_n(x, 6)) == 61:
+            print(a)
+            break
 
 
 main()

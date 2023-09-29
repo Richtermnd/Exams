@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,15 +7,10 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    pass
+    for x in range(100):
+        if int('33', x + 4) - int('33', 4) == 33:
+            print(x)
+            break
 
 
 main()
-
-
-"""
-(3 * (x + 4) + 3) - (3 * 4 + 3) = 33
-3 * (x + 4) + 3 - 12 - 3 = 33
-3 * (x + 4) = 33 - 3 + 12 + 3
-x = 11
-"""

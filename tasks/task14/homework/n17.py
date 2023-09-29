@@ -1,4 +1,4 @@
-def to_dec(x: int, n: int) -> list[int]:
+def to_n(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
@@ -7,10 +7,9 @@ def to_dec(x: int, n: int) -> list[int]:
 
 
 def main():
-    for i in range(2, 10):
-        res = to_dec(68, i)
-        if res[-1] == 2 and len(res) == 4:
-            print(i)
-
+    for n in range(3, 100):
+        a = to_n(68, n)
+        if a[-1] == 2 and len(a) == 4:
+            print(n)
 
 main()

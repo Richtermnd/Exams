@@ -7,11 +7,7 @@ def to_n(x: int, n: int) -> list[int]:
 
 
 def main():
-    # 1. [6; 35]
-    # 2. [25, 125]
-    for n in range(25, 36):
-        if to_n(n, 11)[-1] == 1:
-            print(n)
-
+    x = 11 * 15 ** 65 + 18 * 15 ** 38 - 14 * 15 ** 17 + 19 * 15 ** 11 + 18338
+    print(len(set(to_n(x, 15))))
 
 main()

@@ -1,4 +1,4 @@
-def to_n(x: int, n: int) -> list[int]:
+def to_dec(x: int, n: int) -> list[int]:
     a = []
     while x:
         a = [x % n] + a
