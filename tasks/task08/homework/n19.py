@@ -1,11 +1,14 @@
 import itertools as it
 
 
-alph = 'мария'
-cnt = 0
-for i, word in enumerate(sorted(list(it.product(alph, repeat=4)))):
-    word = ''.join(word)
-    if word == 'ария':
-        cnt = i + 1
+alph = 'АЛГОРИТМ'
+words = it.product(alph, repeat=4)
+words = sorted(words)
+res = 0
+for i, word in enumerate(words):
+    if word[-2:] == ('И', 'М'):
+        res = i + 1
 
-print(cnt)
+print(res)
+
+

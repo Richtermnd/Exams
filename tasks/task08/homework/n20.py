@@ -1,7 +1,10 @@
 import itertools as it
 
 
-alph = 'мария'
-res = list(it.product(alph, repeat=4))
-res.sort()
-print(res[210])
+alph = 'МАРИЯ'
+words = it.product(alph, repeat=4)
+res = 0
+for i, word in enumerate(sorted(words)):
+    if word == tuple('АРИЯ'):
+        res = i + 1
+print(res)

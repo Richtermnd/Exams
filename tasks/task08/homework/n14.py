@@ -1,11 +1,9 @@
 import itertools as it
 
 
-alph = 'дейкстра'
-res = it.permutations(alph, r=6)
-res = map(lambda x: ''.join(x), res)
-res = filter(lambda x: x.count('й') == 1, res)
-res = filter(lambda x: x.find('й') != 5, res)
-res = filter(lambda x: x[x.find('й') + 1] in 'дкстр', res)
-res = len(list(res))
+res = 0
+for x in range(100, 1000):
+    digits = [int(x) for x in str(x)]
+    if digits == sorted(digits):
+        res += 1
 print(res)
