@@ -1,24 +1,10 @@
-graph = {
-    'А': 'БГ',
-    'Б': 'ДЕ',
-    'В': 'БАГ',
-    'Г': 'ЕЖ',
-    'Д': 'ЕЛИ',
-    'Е': 'ВЛ',
-    'Ж': 'Е',
-    'З': '',
-    'И': 'Л',
-    'К': 'Ж',
-    'Л': 'ЖК',
-    'М': '',
-    'Н': ''
-}
+from ipaddress import ip_network
 
+net = ip_network('192.168.240.0/255.255.255.0', False)
 
-def func(path, finish):   
-    if len(path) > 1 and path[-1] == finish:
-        return len(set(path)) == len(path) - 1
-    return sum([func(path + c, finish) for c in graph[path[-1]]])
-    
-
-print(func('Е', 'Е'))
+cnt = 0
+for ip in net:
+    ip = f'{ip:b}'
+    if ip.count('1') == ip.count('0'):
+        cnt += 1
+print(cnt)
